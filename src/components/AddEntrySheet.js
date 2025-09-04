@@ -12,6 +12,8 @@ import {
 } from 'react-native';
 import { EXPENSE_CATEGORIES, INCOME_CATEGORIES, LOAN_CATEGORIES } from '../utils';
 
+import Fonts from '../constants/fonts';
+
 export default function AddEntrySheet({ visible, onClose, mode, onSubmit }) {
   const [amount, setAmount] = useState('');
   const [category, setCategory] = useState('');
@@ -258,8 +260,8 @@ const styles = StyleSheet.create({
     borderRadius: 2,
     marginVertical: 8,
   },
-  title: { fontSize: 18, fontWeight: '700', marginBottom: 8 },
-  label: { fontSize: 13, color: '#475569', marginTop: 8, marginBottom: 6 },
+  title: { fontSize: 18, fontFamily:Fonts[700], marginBottom: 8 },
+  label: { fontSize: 13, color: '#475569', marginTop: 8, marginBottom: 6 ,fontFamily:Fonts[600]},
   input: {
     borderWidth: 1,
     borderColor: '#e5e7eb',
@@ -267,6 +269,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 10,
     fontSize: 16,
+    fontFamily:Fonts[400]
   },
   catWrap: { flexDirection: 'row', flexWrap: 'wrap' },
   chip: {
@@ -277,29 +280,32 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     marginRight: 8,
     marginBottom: 8,
+    fontFamily:Fonts[600]
   },
-  chipActive: { backgroundColor: '#0b5fff', borderColor: '#0b5fff' },
-  chipText: { color: '#334155', fontWeight: '600' },
+  chipActive: { backgroundColor: '#0b5fff', borderColor: '#0b5fff' ,fontFamily:Fonts[600]},
+  chipText: { color: '#334155', fontFamily:Fonts[600] },
   chipTextActive: { color: '#fff' },
   dtRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     marginTop: 10,
+    fontFamily:Fonts[400]
   },
-  link: { color: '#0b5fff', fontWeight: '600' },
-  dtText: { fontSize: 15, color: '#0f172a' },
-  dtEditRow: { flexDirection: 'row', alignItems: 'center', marginTop: 6 },
-  dtInput: { flex: 1, marginRight: 8 },
+  link: { color: '#0b5fff', fontFamily:Fonts[600] },
+  dtText: { fontSize: 15, color: '#0f172a', marginTop: 6 ,fontFamily:Fonts[400]},
+  dtEditRow: { flexDirection: 'row', alignItems: 'center', marginTop: 6, fontFamily:Fonts[400] },
+  dtInput: { flex: 1, marginRight: 8 ,fontFamily:Fonts[400]},
   actions: { flexDirection: 'row', justifyContent: 'flex-end', marginTop: 12 },
   btn: {
     paddingHorizontal: 14,
     paddingVertical: 10,
     borderRadius: 10,
     marginLeft: 8,
+    fontFamily:Fonts[700]
   },
-  btnGhost: { backgroundColor: '#f1f5f9' },
-  btnGhostText: { color: '#111827', fontWeight: '700' },
-  btnPrimary: { backgroundColor: '#0b5fff' },
-  btnPrimaryText: { color: '#fff', fontWeight: '700' },
+  btnGhost: { backgroundColor: '#f1f5f9' ,fontFamily:Fonts[700]},
+  btnGhostText: { color: '#111827', fontFamily:Fonts[700] },
+  btnPrimary: { backgroundColor: '#0b5fff' ,fontFamily:Fonts[700]},
+  btnPrimaryText: { color: '#fff', fontFamily:Fonts[700] },
 });

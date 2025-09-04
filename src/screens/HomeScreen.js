@@ -5,6 +5,7 @@ import SegmentedTabs from '../components/SegmentedTabs';
 import EntryList from '../components/EntryList';
 import AddEntrySheet from '../components/AddEntrySheet';
 import {useBudget} from '../context/BudgetContext';
+import Fonts from '../constants/fonts';
 
 export default function HomeScreen(){
   const {entries, addEntry} = useBudget();
@@ -39,5 +40,5 @@ export default function HomeScreen(){
 
 const styles = StyleSheet.create({
   fab: { position:'absolute', right:16, bottom:24, width:56, height:56, borderRadius:28, backgroundColor:'#0b5fff', alignItems:'center', justifyContent:'center', shadowColor:'#000', shadowOpacity:0.2, shadowRadius:8, elevation:5 },
-  fabPlus: { color:'#fff', fontSize:32, lineHeight:32, marginTop:-2 },
+  fabPlus: { color:'#fff', fontSize:32, lineHeight:32, marginTop:-2,fontFamily:Fonts[600] },
 });

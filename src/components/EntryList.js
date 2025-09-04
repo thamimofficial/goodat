@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, FlatList} from 'react-native';
 import {formatCurrency, formatDateTime} from '../utils';
+import Fonts from '../constants/fonts';
 
 export default function EntryList({data, type}){
   if (!data.length) return (
@@ -39,12 +40,12 @@ function Row({item, type}){
 
 const styles = StyleSheet.create({
   empty: { padding: 24, alignItems:'center' },
-  emptyText: { color:'#64748b' },
+  emptyText: { color:'#64748b', fontFamily: Fonts[400] },
   row: { flexDirection:'row', justifyContent:'space-between', alignItems:'center', paddingHorizontal:16, paddingVertical:14, borderBottomWidth:1, borderBottomColor:'#eef2ff' },
-  cat: { fontSize:16, fontWeight:'600', color:'#111827' },
-  notes: { fontSize:13, color:'#475569', marginTop:2 },
-  date: { fontSize:12, color:'#94a3b8', marginTop:4 },
-  amt: { fontSize:16, fontWeight:'700' },
+  cat: { fontSize:16,fontFamily:Fonts[600], color:'#111827' },
+  notes: { fontSize:13, color:'#475569', marginTop:2, fontFamily:Fonts[400] },
+  date: { fontSize:12, color:'#94a3b8', marginTop:4 ,fontFamily:Fonts[400]},
+  amt: { fontSize:16, fontFamily:Fonts[700] },
   minus: { color:'#ef4444' },
   plus: { color:'#16a34a' },
 });
