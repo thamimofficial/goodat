@@ -61,7 +61,7 @@ export default function Header() {
 const styles = StyleSheet.create({
   wrap: { paddingTop: 16, paddingHorizontal: 16, paddingBottom: 12, backgroundColor: '#0b5fff' },
   row: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
-  label: { color: 'rgba(255,255,255,0.9)', fontSize: 14 },
+  label: { color: 'rgba(255,255,255,0.9)', fontSize: 14,fontFamily:'Outfit-Bold' },
   edit: { color: '#fff', fontSize: 13, textDecorationLine: 'underline' },
   amount: { color:'#fff', fontSize: 36, fontWeight: '700', marginTop: 6 },
 
